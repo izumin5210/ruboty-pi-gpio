@@ -15,11 +15,11 @@ module Ruboty
       end
 
       def read
-        # TODO: not yet implemented.
+        Ruboty::PiGpio::Actions::Read.new(message).call
       end
 
       def unexport
-        # TODO: not yet implemented.
+        Ruboty::PiGpio::Actions::Unexport.new(message).call
       end
     end
   end
