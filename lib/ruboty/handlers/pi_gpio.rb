@@ -6,8 +6,8 @@ module Ruboty
       on(/get gpio value (?<pin>\d{,2})/, name: :read, description: 'Get GPIO value')
       on(/unexport gpio (?<pin>\d{,2})/, name: :unexport, description: 'Unexport GPIO')
 
-      def mode
-        # TODO: not yet implemented.
+      def mode(message)
+        Ruboty::PiGpio::Actions::Mode.new(message).call
       end
 
       def write
