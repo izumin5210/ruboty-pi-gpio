@@ -11,7 +11,7 @@ module Ruboty
       end
 
       def write
-        # TODO: not yet implemented.
+        Ruboty::PiGpio::Actions::Write.new(message).call
       end
 
       def read
