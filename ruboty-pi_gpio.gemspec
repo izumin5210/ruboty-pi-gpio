@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["izumin5210"]
   spec.email         = ["masayuki@izumin.info"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "Control GPIO of Raspberry PI via Ruboty"
+  spec.homepage      = "https://github.com/izumin5210/ruboty-pi_gpio"
+  spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
