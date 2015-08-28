@@ -8,6 +8,8 @@ require "ruboty/pi_gpio/actions/unexport"
 
 END {
   Dir.glob('/sys/class/gpio/gpio*').each do |gpio|
-    open('/sys/class/gpio/unexport', 'w') { |f| f.write(gpio) }
+    if /gpio(?<pin>\d{,2})$/ =~ gpio
+      open('/sys/class/gpio/unexport', 'w') { |f| f.write(pin) }
+    end
   end
 }
