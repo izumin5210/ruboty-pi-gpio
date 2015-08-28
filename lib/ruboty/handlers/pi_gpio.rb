@@ -10,15 +10,15 @@ module Ruboty
         Ruboty::PiGpio::Actions::Mode.new(message).call
       end
 
-      def write
+      def write(message)
         Ruboty::PiGpio::Actions::Write.new(message).call
       end
 
-      def read
+      def read(message)
         Ruboty::PiGpio::Actions::Read.new(message).call
       end
 
-      def unexport
+      def unexport(message)
         Ruboty::PiGpio::Actions::Unexport.new(message).call
       end
     end
