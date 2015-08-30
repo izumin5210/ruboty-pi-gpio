@@ -3,13 +3,17 @@ module Ruboty
     module Actions
       class Read < Base
         def call
-          message.reply(value)
+          robot.receive(message.original.merge(body: body))
         end
 
         private
 
+        def body
+          "#{message.body[prefix]}GPIO#{pin} is #{value}"
+        end
+
         def value
-          File.read("/sys/class/gpio/gpio#{pin}/value")
+          File.read("/sys/class/gpio/gpio#{pin}/value").chomp
         rescue => e
           log(e)
         end
@@ -17,4 +21,3 @@ module Ruboty
     end
   end
 end
-
