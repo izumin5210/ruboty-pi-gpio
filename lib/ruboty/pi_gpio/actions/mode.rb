@@ -5,9 +5,6 @@ module Ruboty
         def call
           export
           set_mode
-          message.reply("Set GPIO#{pin} to #{mode} successfully")
-        rescue
-          message.reply("Failed to set GPIO#{pin} to #{mode}")
         end
 
         private
