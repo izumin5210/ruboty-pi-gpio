@@ -15,6 +15,14 @@ module Ruboty
         def unexport
           open('/sys/class/gpio/unexport', 'w') { |f| f.write(pin) }
         end
+
+        def log(e = nil)
+          Ruboty.logger.info(message.body)
+          unless e.nil?
+            Ruboty.logger.error(e.message)
+            Ruboty.logger.error(e.backtrace.join("\n") + "\n")
+          end
+        end
       end
     end
   end
