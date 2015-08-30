@@ -10,10 +10,14 @@ module Ruboty
 
         def export
           open('/sys/class/gpio/export', 'w') { |f| f.write(pin) }
+        rescue => e
+          log(e)
         end
 
         def unexport
           open('/sys/class/gpio/unexport', 'w') { |f| f.write(pin) }
+        rescue => e
+          log(e)
         end
 
         def log(e = nil)

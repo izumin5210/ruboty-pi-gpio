@@ -11,6 +11,8 @@ module Ruboty
 
         def set_mode
           open("/sys/class/gpio/gpio#{pin}/direction", 'w') { |f| f.write(mode) }
+        rescue => e
+          log(e)
         end
 
         def mode

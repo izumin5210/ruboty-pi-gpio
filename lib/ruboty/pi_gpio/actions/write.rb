@@ -13,6 +13,8 @@ module Ruboty
 
         def set_value
           open("/sys/class/gpio/gpio#{pin}/value", 'w') { |f| f.write(value) }
+        rescue => e
+          log(e)
         end
 
         def value
