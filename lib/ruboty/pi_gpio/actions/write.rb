@@ -7,15 +7,14 @@ module Ruboty
 
         def call
           set_value
-          message.reply("Set GPIO#{pin} to #{value} successfully")
-        rescue
-          message.reply("Failed to set GPIO#{pin} to #{value}")
         end
 
         private
 
         def set_value
           open("/sys/class/gpio/gpio#{pin}/value", 'w') { |f| f.write(value) }
+        rescue => e
+          log(e)
         end
 
         def value

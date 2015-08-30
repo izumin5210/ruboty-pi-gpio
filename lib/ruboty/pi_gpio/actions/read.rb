@@ -12,6 +12,8 @@ module Ruboty
 
         def value
           File.read("/sys/class/gpio/gpio#{pin}/value")
+        rescue => e
+          log(e)
         end
       end
     end
