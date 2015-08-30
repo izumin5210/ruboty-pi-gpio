@@ -1,8 +1,5 @@
 # Ruboty::PiGpio
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ruboty/pi_gpio`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Control GPIO of Raspberry PI via [Ruboty](https://github.com/r7kamura/ruboty).
 
 ## Installation
 
@@ -21,8 +18,7 @@ Or install it yourself as:
     $ gem install ruboty-pi_gpio
 
 ## Usage
-
-TODO: Write usage instructions here
+![](https://raw.githubusercontent.com/izumin5210/ruboty-pi_gpio/master/images/ss.png)
 
 ## Development
 
@@ -32,7 +28,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/ruboty-pi_gpio/fork )
+1. Fork it ( https://github.com/izumin5210/ruboty-pi_gpio/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
