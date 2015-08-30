@@ -2,6 +2,8 @@ module Ruboty
   module PiGpio
     module Actions
       class Read < Base
+        include Mem
+
         def call
           robot.receive(message.original.merge(body: body))
         end
@@ -17,6 +19,7 @@ module Ruboty
         rescue => e
           log(e)
         end
+        memoize :value
       end
     end
   end
