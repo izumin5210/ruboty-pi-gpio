@@ -3,9 +3,7 @@ module Ruboty
     module Actions
       class Read < Base
         def call
-          message.reply("GPIO#{pin} is #{value}")
-        rescue
-          message.reply("Failed to get GPIO#{pin} value")
+          message.reply(value)
         end
 
         private
