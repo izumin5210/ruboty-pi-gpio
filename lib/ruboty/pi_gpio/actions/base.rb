@@ -8,6 +8,10 @@ module Ruboty
           message[:pin]
         end
 
+        def robot
+          message.robot
+        end
+
         def export
           open('/sys/class/gpio/export', 'w') { |f| f.write(pin) }
         rescue => e
@@ -26,6 +30,10 @@ module Ruboty
             Ruboty.logger.error(e.message)
             Ruboty.logger.error(e.backtrace.join("\n") + "\n")
           end
+        end
+
+        def prefix
+          Ruboty::Action.prefix_pattern(robot.name)
         end
       end
     end
