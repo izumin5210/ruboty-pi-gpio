@@ -5,7 +5,7 @@ module Ruboty
         include Mem
 
         def call
-          robot.receive(message.original.merge(body: body))
+          message.reply(body)
         end
 
         private
