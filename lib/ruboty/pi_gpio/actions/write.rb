@@ -7,7 +7,7 @@ module Ruboty
 
         def call
           set_value
-          message.reply("Mode GPIO#{pin} #{mode} successfully")
+          message.reply("Set GPIO#{pin} #{value} successfully")
         end
 
         private
